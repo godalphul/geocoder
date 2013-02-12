@@ -13,7 +13,12 @@ module Geocoder::Lookup
     end
 
     def query_url(query)
-      "#{protocol}://maps.googleapis.com/maps/api/geocode/json?" + url_query_string(query)
+     # "#{protocol}://maps.googleapis.com/maps/api/geocode/json?" + url_query_string(query)
+      
+      path = "/maps/api/geocode/json?" + url_query_string(query)
+      "#{protocol}://maps.googleapis.com#{path}&key=AIzaSyCFAjj-GoOXLF_REBP1AQ3NBnnMxIHLuzg"
+      
+      
     end
 
     private # ---------------------------------------------------------------
